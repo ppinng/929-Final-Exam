@@ -1,0 +1,60 @@
+.navbar-dark {
+  background-color: #af9F8C;
+}
+.jumbotron {
+  padding:70px 30px 70px 30px;
+  margin:0px auto;
+  background: #CEC3B2;
+  color:floralwhite;
+}
+
+.row-header{
+  margin:0px auto;
+  padding:0px auto;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+  margin-top: 4px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.footer {
+  padding-top: 20px;
+  background-color: #d4c8be;
+}
+
+.cardoverall {
+  margin-top: 70px;
+  margin-bottom: 40px;
+
+}
+
+.aboutmargin {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+
+
+.cardmargin {
+  margin-bottom: 15px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+}
+
+.photomargin {
+  padding-top: 20px;
+  margin-bottom: 100px;
+}
+
+
+.footer {
+  margin-top: 50px;
+}
+
+.descbox{
+  padding: 15px 15px 15px 15px;
+
+}
