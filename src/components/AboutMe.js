@@ -17,9 +17,9 @@ function About(props) {
                 <div className="col-5 d-flex align-item-center motto flex-column">
                     <Card className="cardmargin">
                         <CardText>
-                            “You get the best out of others when you give the best of yourself.”
+                            <b>“You get the best out of others when you give the best of yourself.”</b>
                             <div className="d-flex justify-content-center">
-                                – Harvey Firestone
+                               <b> – Harvey Firestone</b>
                             </div>
                         </CardText>
                     </Card>
@@ -35,8 +35,8 @@ function About(props) {
                     </Card>
                     <Card className="cardmargin">
                         <CardText>
+                        <b>Favorite subjects</b>
                             <ul>
-                            <b>Favorite subjects</b>
                             <li><b>English</b> becasue when I was a child I love to watch a cartoon named "Dora the explorer", and I also want to speak with foreigners.</li>
                             <li><b>Science</b> becasue it was fun to do the experiment but the hardest of this subjetc is to lecture the end of experiment like how was it, how the result which is really boring, but it still the second subject that I like.</li>
                             <li><b>P.E</b> because it is the only class that I worked out and played with friends.</li>

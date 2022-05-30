@@ -4,16 +4,6 @@ import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardLink } 
 function Home(props) {
     return (
         <React.Fragment>
-            <div class="jumbotron">
-                <div className="container">
-                    <div className="row row-header">
-                        <div className="col-12 col-sm-6">
-                            <h1 class="display-4">Moonlight Studio</h1>
-                            <p class="col-md-8 fs-4">Hello everyone! I'm the new web developer, and this is my first time creating website. Hope you like it. Peace ✌️</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div className='homebg'>
                 <div className="container cardoverall">
                     <div className='row'>

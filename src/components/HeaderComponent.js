@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavbarBrand, NavItem, NavLink} from 'reactstrap';
-import {Link} from "react-router-dom";
+import { Nav, Navbar, NavbarBrand, NavItem, NavLink } from 'reactstrap';
+import { Link } from "react-router-dom";
 
 class Header extends Component {
     render() {
         return (
             <React.Fragment>
+                <div>
                 <Navbar dark expand="md">
                     <div className="d-flex container">
 
@@ -26,6 +27,17 @@ class Header extends Component {
 
                     </div>
                 </Navbar>
+                <div class="jumbotron">
+                    <div className="container">
+                        <div className="row row-header">
+                            <div className="col-12 col-sm-6">
+                                <h1 class="display-4">Moonlight Studio</h1>
+                                <p class="col-md-8 fs-4">Hello everyone! I'm the new web developer, and this is my first time creating website. Hope you like it. Peace ✌️</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </React.Fragment>
         );
 

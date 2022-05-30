@@ -11,6 +11,21 @@ function Photo(props) {
         <div className="container">
             <div className="row">
                 {
+
+                    selectImg ? (
+
+                        <div className="container d-flex justify-content-center">
+                            <div className="row" style={{ width: 'fit-content ' }}>
+                                <Card className="descbox">
+                                    {selectImg.description}
+                                </Card>
+                            </div>
+                        </div>
+
+                    ) : null
+                }
+                {
+
                     PHOTOS.map(
                         photo => {
                             return (
@@ -28,19 +43,6 @@ function Photo(props) {
                             )
                         }
                     )
-                }
-                {
-                    selectImg ? (
-
-                        <div className="container d-flex justify-content-center">
-                            <div className="row" style={{width:'fit-content '}}>
-                                <Card className="descbox">
-                                        {selectImg.description}
-                                </Card>
-                            </div>
-                        </div>
-
-                    ) : null
                 }
             </div>
         </div>
