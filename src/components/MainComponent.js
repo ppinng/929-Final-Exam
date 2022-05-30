@@ -3,9 +3,8 @@ import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomePage';
 import About from './AboutMe';
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { Switch, Route, Redirect} from 'react-router-dom';
 import Photo from './PhotoGallery'
-import { Router } from 'react-router-dom';
 class Main extends Component {
     render() {
         return (

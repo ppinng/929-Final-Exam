@@ -37,8 +37,6 @@
 }
 
 
-
-
 .cardmargin {
   margin-bottom: 15px;
   padding-left: 10px;
@@ -49,7 +47,7 @@
 
 .photomargin {
   padding-top: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
 }
 
 
@@ -60,4 +58,8 @@
 .descbox{
   padding: 15px 15px 15px 15px;
   margin-bottom: 20px;
+}
+
+.descmargin {
+  margin-bottom: 15px;
 }
