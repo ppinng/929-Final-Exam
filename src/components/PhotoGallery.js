@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardImg, Button} from 'reactstrap';
+import { Card, CardImg, Button, Modal, ModalBody } from 'reactstrap';
 import { PHOTOS } from '../shared/photos'
 import { useState } from 'react';
 import CommentForm from './CommentForm'
@@ -8,13 +8,14 @@ import CommentForm from './CommentForm'
 function Photo(props) {
     const [photos, setPhotos] = useState(PHOTOS)
     const [selectImg, setSelectImg] = useState(null)
+    const [openModal, setOpenModal] = useState(false)
 
     const handleSubmit = (data) => {
         let currentImgIndex = photos.findIndex(p => p.id == selectImg.id)
         let photoslist = [...photos]
         photoslist[currentImgIndex].comment.push(data)
         setPhotos(photoslist)
-        
+
     }
     const handleLike = () => {
         let currentImgIndex = photos.findIndex(p => p.id == selectImg.id)
@@ -31,20 +32,21 @@ function Photo(props) {
                         photo => {
                             return (
                                 <div className="col-3 photomargin">
-                                    <Card onClick={() => setSelectImg(photo)}>
+                                    <Card onClick={() => { setSelectImg(photo); setOpenModal(true) }}>
                                         <CardImg
 
                                             src={photo.img}
 
                                         />
+
                                         {
                                             photo.comment.map(comment => {
                                                 return (
                                                     <div>
                                                         <b>
-                                                        {
-                                                            comment.name
-                                                        }</b>:
+                                                            {
+                                                                comment.name
+                                                            }</b>:
                                                         {
                                                             comment.comment
                                                         } Rating: {
@@ -64,16 +66,32 @@ function Photo(props) {
                 }
                 {
                     selectImg ? (
+                <Modal isOpen={openModal} toggle={() => setOpenModal(!openModal)}>
+
+                    <ModalBody>
+                        <div>
+                            <CardImg
+
+                                src={selectImg.img}
+
+                            />
+                            Like:{selectImg.like}
+
+                        </div>
+                    </ModalBody>
+                </Modal>):null}
+                {
+                    selectImg ? (
 
                         <div className="container d-flex justify-content-center">
                             <div className="row" style={{ width: 'fit-content ' }}>
-                                
+
                                 <Card className="descbox">
                                     <div className='descmargin'>
-                                    <b>{selectImg.description}</b> Like:{selectImg.like}
-                                    <br/><Button onClick={handleLike}>
-                                       Like 
-                                    </Button>
+                                        <b>{selectImg.description}</b> Like:{selectImg.like}
+                                        <br /><Button onClick={handleLike}>
+                                            Like
+                                        </Button>
                                     </div>
                                     <CommentForm onSubmit={handleSubmit} />
                                 </Card>
